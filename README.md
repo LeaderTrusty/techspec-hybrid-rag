@@ -1,5 +1,7 @@
 # 🔧 TechSpec Hybrid RAG — Hardware Datasheet Assistant
 
+![CI](https://github.com/LeaderTrusty/techspec-hybrid-rag/actions/workflows/ci.yml/badge.svg)
+
 A containerized **Hybrid RAG microservice** for querying technical electronics datasheets (**Bosch Sensortec BME280 Datasheet & Handling/Soldering Guide**) with table-preserving PDF parsing, inline page citations, and a two-layer anti-hallucination refusal guardrail.
 
 ---
