@@ -99,10 +99,9 @@ def get_local_metrics() -> LocalMetricsTracker:
 
 
 @st.cache_resource(show_spinner="Loading Hybrid RAG models and Qdrant index (first start takes ~45s)...")
-def load_direct_pipeline(api_key: str, model_name: str, min_rerank_score: float):
+def load_direct_retriever():
     import torch
 
-    from app.rag.generator import GroundedRAGPipeline
     from app.rag.ingest import ingest_directory, load_chunks
     from app.rag.retriever import HybridDatasheetRetriever
 
@@ -118,17 +117,23 @@ def load_direct_pipeline(api_key: str, model_name: str, min_rerank_score: float)
 
     retriever = HybridDatasheetRetriever(
         chunks=chunks,
-        qdrant_path=Path("/tmp/techspec_qdrant"),
+        qdrant_path=":memory:",
     )
     retriever.build_vector_index(recreate=False)
+    return retriever, len(chunks)
 
+
+def load_direct_pipeline(api_key: str, model_name: str, min_rerank_score: float):
+    from app.rag.generator import GroundedRAGPipeline
+
+    retriever, chunk_count = load_direct_retriever()
     pipeline = GroundedRAGPipeline(
         retriever=retriever,
         model_name=model_name,
         min_rerank_score=min_rerank_score,
         api_key=api_key,
     )
-    return pipeline, len(chunks)
+    return pipeline, chunk_count
 
 
 # --- Initialize Runtime Backend & Sidebar Status ---
