@@ -1,0 +1,15 @@
+# Secrets & environment
+.env
+.venv/
+venv/
+
+# Python & test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local Qdrant binary index & locks (rebuilt automatically on startup)
+storage/qdrant_db/
+
+# OS artifacts
+.DS_Store
