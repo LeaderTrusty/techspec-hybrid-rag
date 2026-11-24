@@ -1,0 +1,21 @@
+id,category,answerable,refused,refusal_reason,top_ce,num_citations,passed,total_ms,answer_preview
+Q01,exact_spec,True,False,,3.153050422668457,1,True,5567.7,"Connecting the SDO pin to GND results in the 7-bit I2C slave address 1110110 (0x76), while connecting it to VDDIO result"
+Q02,electrical_spec,True,False,,6.160649299621582,1,True,9443.7,"The VDD main supply voltage range is 1.71 V to 3.6 V [bosch_bme280_datasheet.pdf, p. 2], and the VDDIO interface voltage"
+Q03,exact_spec,True,False,,3.549574136734009,1,True,6798.0,The chip identification number is located at register address 0xD0 (“id”) and returns the chip identification number chi
+Q04,exact_spec,True,False,,3.906308174133301,1,True,7561.0,"The soft reset is performed by writing the value 0xB6 to the ""reset"" register located at address 0xE0 [bosch_bme280_data"
+Q05,exact_spec,True,False,,4.856017112731934,1,True,6435.8,"The humidity oversampling osrs_h is controlled by Register 0xF2, named ""ctrl_hum"" [bosch_bme280_datasheet.pdf, p. 28]."
+Q06,exact_spec,True,False,,4.276481628417969,1,True,6887.0,"Register 0xF4 named “ctrl_meas” controls temperature oversampling (osrs_t[2:0] at bits 7, 6, 5), pressure oversampling ("
+Q07,exact_spec,True,False,,3.487199544906616,1,True,7802.1,"Register 0xF5 (""config"") controls the inactive duration t_sb[2:0] (bits 7, 6, 5), the IIR filter coefficient filter[2:0]"
+Q08,exact_spec,True,False,,3.1768975257873535,2,True,5128.2,"The status register address is 0xF3 [bosch_bme280_datasheet.pdf, p. 28]. Bit 3 (measuring[0]) indicates an ongoing conve"
+Q09,electrical_spec,True,False,,3.9738078117370605,1,True,7025.6,"The current consumption of the BME280 is 0.1 µA in sleep mode [bosch_bme280_datasheet.pdf, p. 2] and 3.6 µA at 1 Hz for "
+Q10,electrical_spec,True,False,,4.831369876861572,2,True,6990.2,"The BME280 supports I²C and SPI digital interfaces [bosch_bme280_datasheet.pdf, p. 32]. The I²C interface supports Stand"
+Q11,electrical_spec,True,False,,4.872137069702148,1,True,7317.7,"The operating ranges for the BME280 are -40 to +85 °C for temperature, 0 to 100 % relative humidity for relative humidit"
+Q12,electrical_spec,True,False,,2.61381196975708,2,True,7761.6,"The BME280 humidity sensor has an absolute accuracy tolerance of ±3 % relative humidity [bosch_bme280_datasheet.pdf, p. "
+Q13,handling_soldering,True,False,,5.868319988250732,1,True,9869.3,The BME280 can be soldered Pb-free with a peak classification temperature (Tp) of 260°C for 20 to 40 seconds [bosch_bme2
+Q14,handling_soldering,True,False,,8.730499267578125,1,True,13218.3,"The minimum height of the solder after reflow shall be at least 50µm [bosch_bme280_datasheet.pdf, p. 45]."
+Q15,handling_soldering,True,False,,6.955865383148193,2,True,7517.6,The BME280 is classified as MSL 1 (moisture sensitivity level) according to IPC/JEDEC standards J-STD-020C and J-STD-033
+T01,unanswerable_trap,False,True,pre_llm_low_confidence (top_ce_score=-9.595 < 0.0),-9.594663619995117,0,True,5381.2,I cannot answer this from the loaded engineering datasheets. No sufficiently relevant passages were found in the indexed
+T02,unanswerable_trap,False,True,pre_llm_low_confidence (top_ce_score=-0.583 < 0.0),-0.5827618837356567,0,True,6602.7,I cannot answer this from the loaded engineering datasheets. No sufficiently relevant passages were found in the indexed
+T03,unanswerable_trap,False,True,llm_insufficient_context,0.8783798217773438,0,True,11964.0,The provided datasheets do not contain the Bluetooth Low Energy advertising interval specification for the BME280.
+T04,unanswerable_trap,False,True,pre_llm_low_confidence (top_ce_score=-2.115 < 0.0),-2.1147656440734863,0,True,5353.9,I cannot answer this from the loaded engineering datasheets. No sufficiently relevant passages were found in the indexed
+T05,unanswerable_trap,False,True,pre_llm_low_confidence (top_ce_score=-8.374 < 0.0),-8.374191284179688,0,True,6556.7,I cannot answer this from the loaded engineering datasheets. No sufficiently relevant passages were found in the indexed

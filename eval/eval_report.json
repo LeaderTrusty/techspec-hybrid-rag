@@ -1,0 +1,228 @@
+{
+  "retrieval": [
+    {
+      "Retrieval Mode": "1. BM25-Only (Lexical)",
+      "mode_key": "bm25",
+      "Hit@1 (%)": 73.3,
+      "Hit@3 (%)": 93.3,
+      "Hit@5 (%)": 93.3,
+      "MRR@5": 0.8333,
+      "Avg Latency (ms)": 7.0
+    },
+    {
+      "Retrieval Mode": "2. Vector-Only (Dense BGE)",
+      "mode_key": "vector",
+      "Hit@1 (%)": 46.7,
+      "Hit@3 (%)": 80.0,
+      "Hit@5 (%)": 93.3,
+      "MRR@5": 0.6556,
+      "Avg Latency (ms)": 209.6
+    },
+    {
+      "Retrieval Mode": "3. Hybrid (BM25 + Vector RRF)",
+      "mode_key": "hybrid",
+      "Hit@1 (%)": 53.3,
+      "Hit@3 (%)": 86.7,
+      "Hit@5 (%)": 86.7,
+      "MRR@5": 0.7,
+      "Avg Latency (ms)": 126.4
+    },
+    {
+      "Retrieval Mode": "4. Hybrid RRF + Cross-Encoder",
+      "mode_key": "hybrid_rerank",
+      "Hit@1 (%)": 80.0,
+      "Hit@3 (%)": 93.3,
+      "Hit@5 (%)": 93.3,
+      "MRR@5": 0.8556,
+      "Avg Latency (ms)": 6949.8
+    }
+  ],
+  "guardrail": {
+    "threshold": 0.0,
+    "in_scope_count": 15,
+    "trap_count": 5,
+    "true_refusal_rate_pct": 80.0,
+    "false_refusal_rate_pct": 0.0,
+    "overall_guardrail_accuracy_pct": 95.0,
+    "min_in_scope_ce_score": 2.614,
+    "max_trap_ce_score": 0.878,
+    "separation_margin": 1.736,
+    "per_item_scores": [
+      {
+        "id": "Q01",
+        "category": "exact_spec",
+        "answerable": true,
+        "top_ce_score": 3.153,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q02",
+        "category": "electrical_spec",
+        "answerable": true,
+        "top_ce_score": 6.161,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q03",
+        "category": "exact_spec",
+        "answerable": true,
+        "top_ce_score": 3.55,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q04",
+        "category": "exact_spec",
+        "answerable": true,
+        "top_ce_score": 3.906,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q05",
+        "category": "exact_spec",
+        "answerable": true,
+        "top_ce_score": 4.856,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q06",
+        "category": "exact_spec",
+        "answerable": true,
+        "top_ce_score": 4.276,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q07",
+        "category": "exact_spec",
+        "answerable": true,
+        "top_ce_score": 3.487,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q08",
+        "category": "exact_spec",
+        "answerable": true,
+        "top_ce_score": 3.177,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q09",
+        "category": "electrical_spec",
+        "answerable": true,
+        "top_ce_score": 3.974,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q10",
+        "category": "electrical_spec",
+        "answerable": true,
+        "top_ce_score": 4.831,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q11",
+        "category": "electrical_spec",
+        "answerable": true,
+        "top_ce_score": 4.872,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q12",
+        "category": "electrical_spec",
+        "answerable": true,
+        "top_ce_score": 2.614,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q13",
+        "category": "handling_soldering",
+        "answerable": true,
+        "top_ce_score": 5.868,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q14",
+        "category": "handling_soldering",
+        "answerable": true,
+        "top_ce_score": 8.73,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "Q15",
+        "category": "handling_soldering",
+        "answerable": true,
+        "top_ce_score": 6.956,
+        "predicted_refuse": false,
+        "correct": true
+      },
+      {
+        "id": "T01",
+        "category": "unanswerable_trap",
+        "answerable": false,
+        "top_ce_score": -9.595,
+        "predicted_refuse": true,
+        "correct": true
+      },
+      {
+        "id": "T02",
+        "category": "unanswerable_trap",
+        "answerable": false,
+        "top_ce_score": -0.583,
+        "predicted_refuse": true,
+        "correct": true
+      },
+      {
+        "id": "T03",
+        "category": "unanswerable_trap",
+        "answerable": false,
+        "top_ce_score": 0.878,
+        "predicted_refuse": false,
+        "correct": false
+      },
+      {
+        "id": "T04",
+        "category": "unanswerable_trap",
+        "answerable": false,
+        "top_ce_score": -2.115,
+        "predicted_refuse": true,
+        "correct": true
+      },
+      {
+        "id": "T05",
+        "category": "unanswerable_trap",
+        "answerable": false,
+        "top_ce_score": -8.374,
+        "predicted_refuse": true,
+        "correct": true
+      }
+    ],
+    "per_mode_misses": {
+      "bm25": [
+        "Q10"
+      ],
+      "vector": [
+        "Q10"
+      ],
+      "hybrid": [
+        "Q03",
+        "Q10"
+      ],
+      "hybrid_rerank": [
+        "Q10"
+      ]
+    }
+  }
+}

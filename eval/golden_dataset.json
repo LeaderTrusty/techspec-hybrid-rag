@@ -1,0 +1,318 @@
+[
+  {
+    "id": "Q01",
+    "category": "exact_spec",
+    "answerable": true,
+    "query": "What are the two BME280 7-bit I2C slave addresses depending on the SDO pin?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "0x76",
+        "1110110"
+      ],
+      [
+        "0x77",
+        "1110111"
+      ]
+    ]
+  },
+  {
+    "id": "Q02",
+    "category": "electrical_spec",
+    "answerable": true,
+    "query": "What are the BME280 VDD main supply voltage range and VDDIO interface voltage range?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "1.71"
+      ],
+      [
+        "1.2"
+      ],
+      [
+        "3.6"
+      ]
+    ]
+  },
+  {
+    "id": "Q03",
+    "category": "exact_spec",
+    "answerable": true,
+    "query": "What is the register address for the BME280 chip identification number and what hex value does it return?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "0xd0"
+      ],
+      [
+        "0x60"
+      ]
+    ]
+  },
+  {
+    "id": "Q04",
+    "category": "exact_spec",
+    "answerable": true,
+    "query": "Which register address performs a soft reset on the BME280 and what hex value must be written to it?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "0xe0"
+      ],
+      [
+        "0xb6"
+      ]
+    ]
+  },
+  {
+    "id": "Q05",
+    "category": "exact_spec",
+    "answerable": true,
+    "query": "Which register address and register name control humidity oversampling osrs_h?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "0xf2"
+      ],
+      [
+        "ctrl_hum"
+      ]
+    ]
+  },
+  {
+    "id": "Q06",
+    "category": "exact_spec",
+    "answerable": true,
+    "query": "Which register address and name control temperature oversampling osrs_t, pressure oversampling osrs_p, and sensor mode?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "0xf4"
+      ],
+      [
+        "ctrl_meas"
+      ]
+    ]
+  },
+  {
+    "id": "Q07",
+    "category": "exact_spec",
+    "answerable": true,
+    "query": "Which register controls the standby time t_sb, IIR filter coefficient, and 3-wire SPI enable bit spi3w_en?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "0xf5"
+      ],
+      [
+        "config"
+      ],
+      [
+        "spi3w_en"
+      ]
+    ]
+  },
+  {
+    "id": "Q08",
+    "category": "exact_spec",
+    "answerable": true,
+    "query": "What is the address of the BME280 status register and which bit indicates an ongoing conversion?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "0xf3"
+      ],
+      [
+        "measuring"
+      ]
+    ]
+  },
+  {
+    "id": "Q09",
+    "category": "electrical_spec",
+    "answerable": true,
+    "query": "What is the BME280 current consumption in sleep mode and at 1 Hz measuring humidity, pressure, and temperature?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "0.1"
+      ],
+      [
+        "3.6"
+      ]
+    ]
+  },
+  {
+    "id": "Q10",
+    "category": "electrical_spec",
+    "answerable": true,
+    "query": "What digital interfaces does the BME280 support and what are their maximum clock frequencies?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "3.4"
+      ],
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": "Q11",
+    "category": "electrical_spec",
+    "answerable": true,
+    "query": "What are the BME280 operating ranges for temperature, relative humidity, and barometric pressure?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "-40"
+      ],
+      [
+        "85"
+      ],
+      [
+        "300"
+      ],
+      [
+        "1100"
+      ]
+    ]
+  },
+  {
+    "id": "Q12",
+    "category": "electrical_spec",
+    "answerable": true,
+    "query": "What are the BME280 humidity sensor accuracy tolerance and 63 percent step response time?",
+    "expected_docs": [
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "3"
+      ],
+      [
+        "1 s",
+        "1s",
+        "response time"
+      ]
+    ]
+  },
+  {
+    "id": "Q13",
+    "category": "handling_soldering",
+    "answerable": true,
+    "query": "What is the peak Pb-free reflow soldering temperature and duration for BME280?",
+    "expected_docs": [
+      "bosch_bme280_handling_soldering.pdf"
+    ],
+    "required_groups": [
+      [
+        "260"
+      ],
+      [
+        "20"
+      ],
+      [
+        "40"
+      ]
+    ]
+  },
+  {
+    "id": "Q14",
+    "category": "handling_soldering",
+    "answerable": true,
+    "query": "What is the minimum required solder height after reflow for mechanical decoupling of the BME280?",
+    "expected_docs": [
+      "bosch_bme280_handling_soldering.pdf",
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": "Q15",
+    "category": "handling_soldering",
+    "answerable": true,
+    "query": "What is the BME280 moisture sensitivity level MSL classification and applicable IPC/JEDEC standard?",
+    "expected_docs": [
+      "bosch_bme280_handling_soldering.pdf",
+      "bosch_bme280_datasheet.pdf"
+    ],
+    "required_groups": [
+      [
+        "msl 1",
+        "msl1"
+      ],
+      [
+        "j-std-020",
+        "j- std-020",
+        "ipc/jedec"
+      ]
+    ]
+  },
+  {
+    "id": "T01",
+    "category": "unanswerable_trap",
+    "answerable": false,
+    "query": "What is the maximum CAN bus baud rate of the STM32F407 microcontroller?",
+    "expected_docs": [],
+    "required_groups": []
+  },
+  {
+    "id": "T02",
+    "category": "unanswerable_trap",
+    "answerable": false,
+    "query": "What is the BME280 Wi-Fi 2.4 GHz transmit power in dBm?",
+    "expected_docs": [],
+    "required_groups": []
+  },
+  {
+    "id": "T03",
+    "category": "unanswerable_trap",
+    "answerable": false,
+    "query": "What is the BME280 Bluetooth Low Energy advertising interval in milliseconds?",
+    "expected_docs": [],
+    "required_groups": []
+  },
+  {
+    "id": "T04",
+    "category": "unanswerable_trap",
+    "answerable": false,
+    "query": "How much internal flash memory in KB and what ARM Cortex-M clock speed does the BME280 have?",
+    "expected_docs": [],
+    "required_groups": []
+  },
+  {
+    "id": "T05",
+    "category": "unanswerable_trap",
+    "answerable": false,
+    "query": "What is the maximum LiPo battery charge current for the Texas Instruments BQ24074?",
+    "expected_docs": [],
+    "required_groups": []
+  }
+]

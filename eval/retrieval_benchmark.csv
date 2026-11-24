@@ -1,0 +1,5 @@
+Retrieval Mode,mode_key,Hit@1 (%),Hit@3 (%),Hit@5 (%),MRR@5,Avg Latency (ms)
+1. BM25-Only (Lexical),bm25,73.3,93.3,93.3,0.8333,7.0
+2. Vector-Only (Dense BGE),vector,46.7,80.0,93.3,0.6556,209.6
+3. Hybrid (BM25 + Vector RRF),hybrid,53.3,86.7,86.7,0.7,126.4
+4. Hybrid RRF + Cross-Encoder,hybrid_rerank,80.0,93.3,93.3,0.8556,6949.8
