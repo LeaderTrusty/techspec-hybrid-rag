@@ -53,8 +53,11 @@ class HybridDatasheetRetriever:
         self.embedder = SentenceTransformer(embed_model_name)
         self.reranker = CrossEncoder(reranker_model_name)
 
-        Path(qdrant_path).mkdir(parents=True, exist_ok=True)
-        self.qdrant = QdrantClient(path=str(qdrant_path))
+        if str(qdrant_path) == ":memory:":
+            self.qdrant = QdrantClient(":memory:")
+        else:
+            Path(qdrant_path).mkdir(parents=True, exist_ok=True)
+            self.qdrant = QdrantClient(path=str(qdrant_path))
 
         tokenized_corpus = [technical_tokenize(c.text) for c in self.chunks]
         self.bm25 = BM25Okapi(tokenized_corpus)
