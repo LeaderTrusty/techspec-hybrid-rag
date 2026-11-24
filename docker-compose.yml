@@ -1,0 +1,37 @@
+services:
+  api:
+    build: .
+    container_name: techspec-rag-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - HF_HUB_DISABLE_IMPLICIT_TOKEN=1
+    volumes:
+      - ./data/datasheets:/app/data/datasheets:ro
+      - ./storage:/app/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+    restart: unless-stopped
+
+  ui:
+    build: .
+    container_name: techspec-rag-ui
+    command: >
+      streamlit run ui/streamlit_app.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.headless=true
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
